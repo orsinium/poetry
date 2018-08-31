@@ -23,7 +23,7 @@ class Include(object):
 
         self._elements = sorted(
             el for el in self._base.glob(self._include)
-            if '__pycache__' not in el
+            if '__pycache__' not in str(el)
         )
 
     @property
